@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+	padding:0;
+}
+body {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: center;
+	background-color: #F8F7F2;
+	color: #0B64C0;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 14px;
+	margin: auto;
+}
+.wrapper{
+	min-height: 100vh;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
+}
+h1{
+	margin: 20px 10px 0;
+	text-align: center;
+}
+h2 {
+	margin: 30px 20px;
+	text-align: center;
+	font-size: 16px;
+}
+
+/*HEADER*/
+header{
+	overflow: visible;
+	background-color: #FBFE56;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+header img{
+	width: 20%;
+	background-color: #FFFFFF;
+	border: 1px solid #EDEDED;
+	border-radius: 50%;
+	padding: 10px;
+	margin: 30px 0 30px;
+}
+header p{
+	margin: 0 10px 10px;
+}
+
+/*CONTENT*/
+.content {
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.content h2 {
+	margin: 30px 20px;
+	text-align: center;
+	font-size: 16px;
+}
+.content form{
+	max-width:90%;
+	margin: 0 10px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.content form p, 
+.content form input {
+	margin: 0 10px 10px;
+}
+.content form input{
+	border: 1px solid #EDEDED;
+	color: #0B64C0;
+	padding: 2px;
+}
+.content form input[type="submit"]{
+	background-color: #EDEDED;
+	padding: 5px;
+	width: 50%;
+}
+.content form input{
+	width: 80%;
+}
+
+/*FOOTER*/
+footer{
+	background-color: #FBFE56;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+footer h2{
+	margin-bottom: 0;
+}
+.social{
+	width: 100%;
+	margin: 20px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.social li{
+	padding:5px;
+	text-align: center;
+	list-style-position: inside;
+	list-style-type: none;
+}
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px){
+	/**/
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px){
+	/**/
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px){
+	.wrapper{
+		min-width : 768px;
+	}
+	.social{
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px){
+	/**/
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px){
+	.wrapper{
+		width : 1200px;
+	}
+}
