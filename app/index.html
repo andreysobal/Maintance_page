@@ -25,12 +25,12 @@
 		</header>
 		<section class="content">
 			<h2>В настоящее время мой сайт находится на дороботке</h2>
-				<form id="callback">
-					<p class="callback_label">Оставьте свое имя и номер телефона и я Вам обязательно перезвоню</p>
-					<input type="text" name="name" id="name" required autofocus placeholder="Ваше имя" pattern="\D+">
-					<input type="text" name="phone" id="tel" required placeholder="+375-..-..." pattern="\+375-\d{2}-\d{7}">
+				<form action="handler.php" method="post" name="callback" class="rep-form" id="hidden-form" novalidate>
+			  	<p class="callback_label">Оставьте свое имя и номер телефона и я Вам обязательно перезвоню</p>
+					<input type="name" name="name" class="textarea name text_black" required autofocus placeholder="Ваше имя">
+					<input type="tel" name="number" class="textarea tel text_black" required placeholder="+375-..-...">
 					<button class="button" type="submit">Отправить</button>
-				</form>
+			  </form>
 		</section>
 		<footer>
 			<h2>Вы также можете меня найти</h2>
@@ -41,7 +41,16 @@
 			</ul>
 		</footer>
 	</div>
+	<div class="ironCurtain" style = "display: none">
+    <div class="progressBar">
+        <span id="progressStatus"><span>Загрузка</span></span>
+        <div class="container">
+          <div class="bar"></div>
+        </div>
+    </div>
+   </div>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.form.min.js"></script>
 	<script src="js/main.js"></script>
 	
 </body>
