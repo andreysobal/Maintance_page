@@ -50,7 +50,13 @@ gulp.task('build', ['clean', 'img'], function() {
     var buildJs = gulp.src('app/js/**/*')
     .pipe(gulp.dest('dist/js'))
 
+    var buildPHPmailer = gulp.src('vendor/phpmailer/phpmailer/src/*.*')
+    .pipe(gulp.dest('dist/lib/phpmailer/src'))
+
     var buildHtml = gulp.src('app/**/*.html')
+    .pipe(gulp.dest('dist'));
+
+    var buildRepForm = gulp.src('app/**/*.php')
     .pipe(gulp.dest('dist'));
 
 });
